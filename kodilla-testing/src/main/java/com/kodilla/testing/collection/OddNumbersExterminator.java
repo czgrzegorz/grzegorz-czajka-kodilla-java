@@ -9,7 +9,7 @@ public class OddNumbersExterminator {
         while(iteratorForRemoving.hasNext()) {
             Integer number = iteratorForRemoving.next();
             if (number % 2 != 0) {
-                numbers.remove(number);
+                iteratorForRemoving.remove();
             }
         }
         return numbers;
