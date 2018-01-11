@@ -32,9 +32,9 @@ public class CalculationsTestSuite {
         //When
         dataOut.calculateAdvStatistics(dataMock);
         boolean zeroPresentInDenominator = dataOut.zeroInDenominator;
-        double postsPerUserTest = dataOut.averagePostsPerUser;
-        double commentsPerUserTest = dataOut.averageCommentsPerUser;
-        double commentsPerPost = dataOut.averageCommentsPerPost;
+        Double postsPerUserTest = dataOut.averagePostsPerUser;
+        Double commentsPerUserTest = dataOut.averageCommentsPerUser;
+        Double commentsPerPost = dataOut.averageCommentsPerPost;
 
         //Then
         Assert.assertTrue(zeroPresentInDenominator);
@@ -64,9 +64,9 @@ public class CalculationsTestSuite {
         //When
         dataOut.calculateAdvStatistics(dataMock);
         boolean zeroPresentInDenominator = dataOut.zeroInDenominator;
-        double postsPerUserTest = dataOut.averagePostsPerUser;
-        double commentsPerUserTest = dataOut.averageCommentsPerUser;
-        double commentsPerPost = dataOut.averageCommentsPerPost;
+        Double postsPerUserTest = dataOut.averagePostsPerUser;
+        Double commentsPerUserTest = dataOut.averageCommentsPerUser;
+        Double commentsPerPost = dataOut.averageCommentsPerPost;
 
         //Then
         Assert.assertTrue(zeroPresentInDenominator);
@@ -95,9 +95,9 @@ public class CalculationsTestSuite {
         Calculations dataOut = new Calculations(dataMock);
 
         //When
-        double postsPerUserTest = dataOut.averagePostsPerUser;
-        double commentsPerUserTest = dataOut.averageCommentsPerUser;
-        double commentsPerPost = dataOut.averageCommentsPerPost;
+        Double postsPerUserTest = dataOut.averagePostsPerUser;
+        Double commentsPerUserTest = dataOut.averageCommentsPerUser;
+        Double commentsPerPost = dataOut.averageCommentsPerPost;
 
         //Then
         Assert.assertEquals(2, postsPerUserTest, 0.01);
@@ -127,9 +127,9 @@ public class CalculationsTestSuite {
         Calculations dataOut = new Calculations(dataMock);
 
         //When
-        double postsPerUserTest = dataOut.averagePostsPerUser;
-        double commentsPerUserTest = dataOut.averageCommentsPerUser;
-        double commentsPerPost = dataOut.averageCommentsPerPost;
+        Double postsPerUserTest = dataOut.averagePostsPerUser;
+        Double commentsPerUserTest = dataOut.averageCommentsPerUser;
+        Double commentsPerPost = dataOut.averageCommentsPerPost;
 
         //Then
         Assert.assertEquals(10, postsPerUserTest, 0.01);
@@ -159,9 +159,9 @@ public class CalculationsTestSuite {
         Calculations dataOut = new Calculations(dataMock);
 
         //When
-        double postsPerUserTest = dataOut.averagePostsPerUser;
-        double commentsPerUserTest = dataOut.averageCommentsPerUser;
-        double commentsPerPost = dataOut.averageCommentsPerPost;
+        Double postsPerUserTest = dataOut.averagePostsPerUser;
+        Double commentsPerUserTest = dataOut.averageCommentsPerUser;
+        Double commentsPerPost = dataOut.averageCommentsPerPost;
 
         //Then
         Assert.assertEquals(10, postsPerUserTest, 0.01);

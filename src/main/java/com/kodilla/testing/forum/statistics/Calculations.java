@@ -2,7 +2,7 @@ package com.kodilla.testing.forum.statistics;
 
 public class Calculations {
     Statistics statistics;
-    Double averagePostsPerUser = null;
+    Double averagePostsPerUser;
     Double averageCommentsPerUser;
     Double averageCommentsPerPost;
     boolean zeroInDenominator = false;
