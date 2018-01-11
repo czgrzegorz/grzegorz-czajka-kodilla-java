@@ -95,6 +95,7 @@ public class CalculationsTestSuite {
         Calculations dataOut = new Calculations(dataMock);
 
         //When
+        dataOut.calculateAdvStatistics(dataMock);
         Double postsPerUserTest = dataOut.averagePostsPerUser;
         Double commentsPerUserTest = dataOut.averageCommentsPerUser;
         Double commentsPerPost = dataOut.averageCommentsPerPost;
@@ -127,6 +128,7 @@ public class CalculationsTestSuite {
         Calculations dataOut = new Calculations(dataMock);
 
         //When
+        dataOut.calculateAdvStatistics(dataMock);
         Double postsPerUserTest = dataOut.averagePostsPerUser;
         Double commentsPerUserTest = dataOut.averageCommentsPerUser;
         Double commentsPerPost = dataOut.averageCommentsPerPost;
@@ -159,6 +161,7 @@ public class CalculationsTestSuite {
         Calculations dataOut = new Calculations(dataMock);
 
         //When
+        dataOut.calculateAdvStatistics(dataMock);
         Double postsPerUserTest = dataOut.averagePostsPerUser;
         Double commentsPerUserTest = dataOut.averageCommentsPerUser;
         Double commentsPerPost = dataOut.averageCommentsPerPost;

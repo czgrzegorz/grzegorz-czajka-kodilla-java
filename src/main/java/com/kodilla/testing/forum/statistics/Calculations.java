@@ -11,9 +11,9 @@ public class Calculations {
         this.statistics = statistics;
     }
     void calculateAdvStatistics(Statistics statistics){
-        int numberOfUsers = statistics.usersNames().size();
-        int numberOfPosts = statistics.postsCount();
-        int numberOfComments = statistics.commentsCount();
+        double numberOfUsers = statistics.usersNames().size();
+        double numberOfPosts = statistics.postsCount();
+        double numberOfComments = statistics.commentsCount();
         if(numberOfUsers != 0 && numberOfPosts != 0){
             averagePostsPerUser = Double.valueOf(numberOfPosts / numberOfUsers);
             averageCommentsPerUser = Double.valueOf(numberOfComments / numberOfUsers);
