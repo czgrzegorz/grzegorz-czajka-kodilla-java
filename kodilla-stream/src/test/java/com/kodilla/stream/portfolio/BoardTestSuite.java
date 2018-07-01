@@ -4,8 +4,10 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.OptionalDouble;
 
 import static java.util.stream.Collectors.toList;
 
@@ -143,23 +145,17 @@ public class BoardTestSuite {
         //When
         List<TaskList> inProgressTasks2 = new ArrayList<>();
         inProgressTasks2.add(new TaskList("In progress"));
-        double daysTotal = project.getTaskLists().stream()
+        OptionalDouble averageO = project.getTaskLists().stream()
                 .filter(inProgressTasks2::contains)
                 .flatMap(tl -> tl.getTasks().stream())
                 .map(t -> t.getCreated())
-                .map(tt -> - tt.compareTo(LocalDate.now()))
-                .reduce(0, (sum, current) -> sum = sum + current);
+                .map(tt -> Period.between(tt, LocalDate.now()))
+                .mapToInt(n -> n.getDays())
+                .average();
 
-        double tasksTotal = project.getTaskLists().stream()
-                .filter(inProgressTasks2::contains)
-                .flatMap(tl -> tl.getTasks().stream())
-                .count();
-
-        double averageDaysL = daysTotal / tasksTotal;
+        double averageD = averageO.getAsDouble();
 
         //Then
-        Assert.assertEquals(10.0, averageDaysL, 0.01);
-        Assert.assertEquals(30.0, daysTotal, 0.01);
-        Assert.assertEquals(3.0, tasksTotal, 0.01);
+        Assert.assertEquals(10.0, averageD, 0.01);
     }
 }
